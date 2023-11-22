@@ -31,25 +31,18 @@ def inquiry_member_data():
        print(f'{list_member_powerlifting_gym[i][0]}\t|{list_member_powerlifting_gym[i][1]}\t|{list_member_powerlifting_gym[i][2]}\t|{list_member_powerlifting_gym[i][3]}\t|{list_member_powerlifting_gym[i][4]}\t|{list_member_powerlifting_gym[i][5]}\t|{list_member_powerlifting_gym[i][6]}\t|{list_member_powerlifting_gym[i][7]}\t|{list_member_powerlifting_gym[i][8]}')
     elif inquiry == '2' :
       search_by_id=input(
-      'Input ID Member : ')1
+      'Input ID Member : ')
       print(f'{list_member_powerlifting_gym[int(search_by_id)-1][0]}\t|{list_member_powerlifting_gym[int(search_by_id)-1][1]}\t|{list_member_powerlifting_gym[int(search_by_id)-1][2]}\t|{list_member_powerlifting_gym[int(search_by_id)-1][3]}\t|{list_member_powerlifting_gym[int(search_by_id)-1][4]}\t|{list_member_powerlifting_gym[int(search_by_id)-1][5]}\t|{list_member_powerlifting_gym[int(search_by_id)-1][6]}\t|{list_member_powerlifting_gym[int(search_by_id)-1][7]}\t|{list_member_powerlifting_gym[int(search_by_id)-1][8]}')
       
 
 # Function Add Member Data (Fix)
 def add_member_data() :
-  
-  # Confirm Add Data Member
-  confirm_add=input('Do You Want to Add New Member Data? (Yes/No) : ')
-  
-  # If Confirm Add = No ---> Back to Main Menu
-  if confirm_add =='No' :
-    print('Back to Main Menu')
-
-  elif confirm_add != 'Yes' and confirm_add != 'No' :
-    print('Invalid Input')
-    
-  # If Confirm Add = Yes ---> Input Member Data
-  elif confirm_add == 'Yes' :
+  add=input('''
+  Menu Add Member Data
+  1. Add Member Data 
+  2. Cancel Add 
+  Input Update Menu : ''')
+  if add == '1':
     member_id=input('Please Input Member ID to Add : ')
     member_name=input('Please Input Member Name : ')
     member_age=input('Please Input Member Age: ')  
